@@ -1,6 +1,8 @@
+
 import random
 from faker import Faker
 fake = Faker()
+ 
  
 class BaseContact:
     def __init__(self, first_name, last_name, email_address,tel_priv):
@@ -24,10 +26,7 @@ class BaseContact:
     @property
     def label_lenght(self):
         return sum([len(self.first_name), len(self.last_name),+1])
- 
-     
-     
- 
+
 class BusinessContact(BaseContact):
     def __init__(self, tel_work, company, occupation, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -47,9 +46,9 @@ def create_contacts(kind, how_many):
     contacts = []
     for i in range(how_many):
         if kind == 'b':
-            how_many.append(BusinessContact)
+            contacts.append(BusinessContact)
         elif kind == 'd':
-            how_many.append(BaseContact)
+            contacts.append(BaseContact)
     return contacts
  
  

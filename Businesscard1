@@ -47,17 +47,10 @@ def input_data(x):
         human[i]['name']= fake.first_name() 
         human[i]['last_name']= fake.last_name() 
         human[i]['tel_priv'] = fake.phone_number()
-        
     print(human) 
   
 
 def main(): 
-  
-    # Enter number of students 
-    # For the above task make this 100 
     number_of_human = 2
     input_data(number_of_human) 
 main() 
-# The folder or location where this python code 
-# is save there a students.json will be created 
-# having 10 students data. 

@@ -35,6 +35,12 @@ class BusinessContact(BaseContact):
         self.occupation = occupation
 human_1 = BusinessContact(first_name=fake.first_name(), last_name=fake.last_name(), company=fake.company(), occupation=fake.job(),
               email_address=fake.email(), tel_priv=fake.phone_number(), tel_work=fake.phone_number())
+print(human_1)
+print(human_1.contact())
+print(human_1.workcontact())
+print(human_1.label_lenght)
+print()
+
 
 def create_contacts(kind, how_many):
     

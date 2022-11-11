@@ -55,8 +55,8 @@ def main():
   
     # Enter number of students 
     # For the above task make this 100 
-    number_of_students = 2
-    input_data(number_of_students) 
+    number_of_human = 2
+    input_data(number_of_human) 
 main() 
 # The folder or location where this python code 
 # is save there a students.json will be created 

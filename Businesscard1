@@ -36,26 +36,27 @@ class BusinessContact(BaseContact):
 human_1 = BusinessContact(first_name=fake.first_name(), last_name=fake.last_name(), company=fake.company(), occupation=fake.job(),
               email_address=fake.email(), tel_priv=fake.phone_number(), tel_work=fake.phone_number())
 
-def create_contacts(kind, how_many):
-    
-
-    contacts = []
-    
-    for i in range(how_many):
-        if kind == 'b':
-            first_name = fake.first_name() 
-            contacts.append(first_name)
-
-        elif kind == 'd':
-            first_name = fake.first_name()
-            contacts.append(first_name)
-            print("dzwonie do", contacts)
-    return contacts
 
 
-if __name__ == "__main__":
-    kind = input("Jaki rodzaj wizytówki utworzyć? b - biznesowa, d - domowa: ")
-    how_many = int(input('Proszę podaj liczbę wizytówek do stworzenia '))
-    contacts = create_contacts(kind, how_many)
-    print(contacts)
+def input_data(x): 
+  
+    # dictionary 
+    human ={} 
+    for i in range(0, x): 
+        human[i]={} 
+        human[i]['name']= fake.first_name() 
+        human[i]['last_name']= fake.last_name() 
+        
+    print(human) 
+  
 
+def main(): 
+  
+    # Enter number of students 
+    # For the above task make this 100 
+    number_of_students = 2
+    input_data(number_of_students) 
+main() 
+# The folder or location where this python code 
+# is save there a students.json will be created 
+# having 10 students data. 

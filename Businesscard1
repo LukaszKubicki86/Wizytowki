@@ -33,29 +33,29 @@ class BusinessContact(BaseContact):
         self.tel_work = tel_work
         self.company = company
         self.occupation = occupation
+human_1 = BusinessContact(first_name=fake.first_name(), last_name=fake.last_name(), company=fake.company(), occupation=fake.job(),
+              email_address=fake.email(), tel_priv=fake.phone_number(), tel_work=fake.phone_number())
 
-def input_data(kind, how_many): 
-  
-    # dictionary 
-    human ={} 
+
+def create_contact(kind, how_many): 
+
     for i in range(how_many): 
         if kind == 'd':
-            human[i]={} 
-            human[i]['first_name']= fake.first_name() 
-            human[i]['last_name']= fake.last_name() 
-            human[i]['tel_priv'] = fake.phone_number()
+            print(human_1)
+            print(human_1.contact())
+            print(human_1.label_lenght)
+            print()
+
         elif kind =='b':
-            human[i]={} 
-            human[i]['first_name']= fake.first_name() 
-            human[i]['last_name']= fake.last_name() 
-            human[i]['tel_work'] = fake.phone_number()
-            human[i]['company']= fake.company() 
-            human[i]['occupation']= fake.job() 
-            human[i]['email'] = fake.email()
-        print(human) 
+            print(human_1)
+            print(human_1.workcontact())
+            print(human_1.label_lenght)
+            print()
+
 
 def main(): 
     kind = input("Jaki rodzaj wizytówki utworzyć? b - biznesowa, d - domowa: ")
     how_many = int(input('Proszę podaj liczbę wizytówek do stworzenia '))
-    contacts = input_data(kind, how_many)
+    contacts = create_contact(kind, how_many)
+
 main() 

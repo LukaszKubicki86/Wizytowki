@@ -34,19 +34,28 @@ class BusinessContact(BaseContact):
         self.company = company
         self.occupation = occupation
 
-def input_data(x): 
+def input_data(kind, how_many): 
   
     # dictionary 
     human ={} 
-    for i in range(0, x): 
-        human[i]={} 
-        human[i]['first_name']= fake.first_name() 
-        human[i]['last_name']= fake.last_name() 
-        human[i]['tel_priv'] = fake.phone_number()
-    print(human) 
-  
+    for i in range(how_many): 
+        if kind == 'd':
+            human[i]={} 
+            human[i]['first_name']= fake.first_name() 
+            human[i]['last_name']= fake.last_name() 
+            human[i]['tel_priv'] = fake.phone_number()
+        elif kind =='b':
+            human[i]={} 
+            human[i]['first_name']= fake.first_name() 
+            human[i]['last_name']= fake.last_name() 
+            human[i]['tel_work'] = fake.phone_number()
+            human[i]['company']= fake.company() 
+            human[i]['occupation']= fake.job() 
+            human[i]['email'] = fake.email()
+        print(human) 
 
 def main(): 
+    kind = input("Jaki rodzaj wizytówki utworzyć? b - biznesowa, d - domowa: ")
     how_many = int(input('Proszę podaj liczbę wizytówek do stworzenia '))
-    input_data(how_many) 
+    contacts = input_data(kind, how_many)
 main() 

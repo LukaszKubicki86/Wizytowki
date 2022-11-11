@@ -33,10 +33,6 @@ class BusinessContact(BaseContact):
         self.tel_work = tel_work
         self.company = company
         self.occupation = occupation
-human_1 = BusinessContact(first_name=fake.first_name(), last_name=fake.last_name(), company=fake.company(), occupation=fake.job(),
-              email_address=fake.email(), tel_priv=fake.phone_number(), tel_work=fake.phone_number())
-
-
 
 def input_data(x): 
   
@@ -44,7 +40,7 @@ def input_data(x):
     human ={} 
     for i in range(0, x): 
         human[i]={} 
-        human[i]['name']= fake.first_name() 
+        human[i]['first_name']= fake.first_name() 
         human[i]['last_name']= fake.last_name() 
         human[i]['tel_priv'] = fake.phone_number()
     print(human) 

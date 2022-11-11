@@ -46,6 +46,7 @@ def input_data(x):
         human[i]={} 
         human[i]['name']= fake.first_name() 
         human[i]['last_name']= fake.last_name() 
+        human[i]['tel_priv'] = fake.phone_number()
         
     print(human) 
   

@@ -47,6 +47,6 @@ def input_data(x):
   
 
 def main(): 
-    number_of_human = 2
-    input_data(number_of_human) 
+    how_many = int(input('Proszę podaj liczbę wizytówek do stworzenia '))
+    input_data(how_many) 
 main() 
